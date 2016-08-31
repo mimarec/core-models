@@ -1,0 +1,46 @@
+type: object
+description: A resource representing a Bank.
+properties:
+    accountNumber:
+        type: string
+        description: Account number in either IBAN (max length 34) or BBAN (max length 17) format.
+        maxLength: 34
+    accountNumberType:
+        type: string
+        enum: ["BBAN","IBAN"]
+        description: Type of the bank account number (International or Basic Bank Account Number). For more information refer to http://en.wikipedia.org/wiki/International_Bank_Account_Number.
+    accountType:
+        type: string
+        enum: ["CHECKING","SAVINGS"]
+        description: Type of the bank account.
+    accountName:
+        type: string
+        description: A customer designated name.
+        maxLength: 64
+    checkType:
+        type: string
+        enum: ["PERSONAL","COMPANY"]
+        description: Type of the check when this information was obtained through a check by the facilitator or merchant.
+    bankName:
+        type: string
+        description: Name of the bank.
+        maxLength: 64
+    countryCode:
+        type: string
+        description: 2 letter country code of the Bank.
+        maxLength: 2
+    confirmationStatus:
+        type: string
+        enum: ["UNCONFIRMED","CONFIRMED"]
+        description: Confirmation status of a bank account.
+    payerId:
+        type: string
+        description: Identifier of the payer.
+    createTime:
+        type: string
+        format: date-time
+        description: Time the resource was created.
+    updateTime:
+        type: string
+        format: date-time
+        description: Time the resource was last updated.
