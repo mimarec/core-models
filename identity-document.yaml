@@ -1,0 +1,17 @@
+type: object
+description: Data associated with the transferee personal document information.
+properties:
+    documentNumber:
+        type: string
+        description: Document number.
+    documentType:
+        type: object
+        description: Document type of the person who receives the money.
+        properties:
+            id:
+                type: string
+                enum: ["PASSPORT", "NIF", "RESIDENTIAL_PASS"]
+                description: Document type identifier.
+            name:
+                type: string
+                description: Document type name.

@@ -1,0 +1,10 @@
+type: object
+description: Type of account.
+properties:
+    id:
+        type: string
+        description: Identifier associated to account type.
+        enum: ["CREDIT", "DEBIT"]
+    name:
+        type: string
+        description: Name associated to account type.

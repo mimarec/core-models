@@ -1,0 +1,10 @@
+type: object
+description: Type of account number.
+properties:
+    id:
+        type: string
+        description: Identifier associated to account number.
+        enum: ["CCC", "IBAN", "SWIFT", "CLABE", "SPEI"]
+    name:
+        type: string
+        description: Name associated to account number.

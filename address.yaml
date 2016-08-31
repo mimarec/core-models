@@ -1,0 +1,28 @@
+type: object
+description: Base Address object used as billing address in a payment or extended for Shipping Address.
+properties:
+    line1:
+        type: string
+        description: Line 1 of the address (e.g., Number, street, etc). 100 characters max.
+    line2:
+        type: string
+        description: Line 2 of the address (e.g., Suite, apt #, etc). 100 characters max.
+    city:
+        type: string
+        description: City name. 50 characters max.
+    countryCode:
+        type: string
+        description: 2-letter country code. 2 characters max.
+    postalCode:
+        type: string
+        description: Zip code or equivalent is usually required for countries that have them. 20 characters max. Required in certain countries.
+    state:
+        type: string
+        description: 2-letter code for US states, and the equivalent for other countries. 100 characters max.
+    status:
+        type: string
+        enum: ["CONFIRMED", "UNCONFIRMED"]
+        description: Address status identifier.
+    type:
+        type: string
+        description: Type of address (e.g., HOME_OR_WORK, GIFT etc).

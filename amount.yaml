@@ -1,0 +1,22 @@
+type: object
+description: Bank information associated with the destination account.
+properties:
+    total:
+        type: string
+        description: Total amount charged from the payer to the payee. In case of a refund, this is the refunded amount to the original payer from the payee. 10 characters max with support for 2 decimal places.
+    currency:
+        type: string
+        description: 3-letter currency code
+    details:
+        type: object
+        description: Additional details of the payment amount.
+        properties:
+            subtotal:
+                type: string
+                description: Amount of the subtotal of the items. Required if line items are specified. 10 characters max, with support for 2 decimal places.
+            shipping:
+                type: string
+                description: Amount charged for shipping. 10 characters max with support for 2 decimal places.
+            tax:
+                type: string
+                description: Amount charged for tax. 10 characters max with support for 2 decimal places.

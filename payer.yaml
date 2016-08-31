@@ -1,0 +1,20 @@
+type: object
+description: A resource representing a Payer that funds a payment.
+properties:
+    prayerId:
+        type: string
+        description: A unique identifier of the payer.
+    status:
+        type: string
+        enum: ["VERIFIED","UNVERIFIED"]
+        description: Status of payer.
+    firstName:
+        type: string
+        description: First name of the payer.
+    lastName:
+        type: string
+        description: Last name of the payer.
+    identityDocument:
+        $ref: '#/definitions/identityDocument'
+    address:
+        $ref: '#/definitions/address'
