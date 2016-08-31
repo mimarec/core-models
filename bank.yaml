@@ -36,11 +36,3 @@ properties:
     payerId:
         type: string
         description: Identifier of the payer.
-    createTime:
-        type: string
-        format: date-time
-        description: Time the resource was created.
-    updateTime:
-        type: string
-        format: date-time
-        description: Time the resource was last updated.

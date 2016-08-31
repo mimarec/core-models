@@ -1,0 +1,10 @@
+type: object
+description: Token access
+properties:
+    tokenId:
+        type: string
+        description: Token access for payment
+    status:
+        type: string
+        enum: ["VERIFIED","UNVERIFIED"]
+        description: Status of token.
